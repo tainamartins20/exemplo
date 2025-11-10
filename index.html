@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegance Boutique - Moda Feminina</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1 class="logo" onclick="window.location.href='index.html'">Elegance Boutique</h1>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link active">Início</a>
+                <a href="produtos.html" class="nav-link">Produtos</a>
+                <a href="sobre.html" class="nav-link">Sobre</a>
+                <a href="contato.html" class="nav-link">Contato</a>
+            </div>
+            
+            <div class="nav-icons">
+                <button class="icon-btn" id="wishlistBtn" data-testid="wishlist-btn">
+                    <i class="fas fa-heart"></i>
+                    <span class="badge" id="wishlistCount">0</span>
+                </button>
+                <button class="icon-btn" id="cartBtn" data-testid="cart-btn">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="badge" id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" data-testid="hero-section">
+        <img src="https://images.unsplash.com/photo-1638717366457-dbcaf6b1afbc" loading="lazy" alt="Hero" class="hero-bg">
+        <div class="hero-content">
+            <h1 class="hero-title">Moda que inspira confiança</h1>
+            <p class="hero-subtitle">Descubra as novas coleções que vão transformar seu estilo</p>
+            <a href="produtos.html" class="btn-primary" data-testid="hero-cta-btn">Ver Novidades</a>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories-section" data-testid="categories-section">
+        <div class="container">
+            <h2 class="section-title">Nossas Coleções</h2>
+            <div class="categories-grid">
+                <div class="category-card" onclick="window.location.href='produtos.html?categoria=casual'" data-testid="category-casual">
+                    <img src="https://images.unsplash.com/photo-1716004360220-213371f51df1" loading="lazy" alt="Casual">
+                    <div class="category-overlay">
+                        <h3>Casual</h3>
+                    </div>
+                </div>
+                <div class="category-card" onclick="window.location.href='produtos.html?categoria=fitness'" data-testid="category-fitness">
+                    <img src="https://images.unsplash.com/photo-1637714619771-50f333a6066b" loading="lazy" alt="Fitness">
+                    <div class="category-overlay">
+                        <h3>Fitness</h3>
+                    </div>
+                </div>
+                <div class="category-card" onclick="window.location.href='produtos.html?categoria=social'" data-testid="category-social">
+                    <img src="https://images.unsplash.com/photo-1568252542512-9fe8fe9c87bb" loading="lazy" alt="Social">
+                    <div class="category-overlay">
+                        <h3>Social</h3>
+                    </div>
+                </div>
+                <div class="category-card" onclick="window.location.href='produtos.html?categoria=novidades'" data-testid="category-novidades">
+                    <img src="https://images.unsplash.com/photo-1760287363707-851f4780b98c" loading="lazy" alt="Novidades">
+                    <div class="category-overlay">
+                        <h3>Novidades</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center" style="margin-top: 30px;">
+                <a href="produtos.html" class="btn-secondary">Ver Tudo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section" data-testid="products-section">
+        <div class="container">
+            <h2 class="section-title">Mais Vendidos</h2>
+            <p class="section-subtitle">Descubra as peças favoritas das nossas clientes</p>
+            <div class="products-grid" id="homeProducts"></div>
+            <div class="text-center" style="margin-top: 40px;">
+                <a href="produtos.html" class="btn-primary">Ver Todos os Produtos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promo Banner -->
+    <section class="promo-banner" data-testid="promo-banner">
+        <img src="https://images.pexels.com/photos/34599220/pexels-photo-34599220.jpeg" loading="lazy" alt="Promo">
+        <div class="promo-content">
+            <h2>Nova Coleção Primavera</h2>
+            <p>Até 30% OFF em peças selecionadas</p>
+            <a href="produtos.html" class="btn-primary" data-testid="promo-cta-btn">Aproveitar Agora</a>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials-section" data-testid="testimonials-section">
+        <div class="container">
+            <h2 class="section-title">O que nossas clientes dizem</h2>
+            <p class="section-subtitle">Avaliações reais de quem já conhece a Elegance Boutique</p>
+            <div class="testimonials-scroll">
+                <div class="testimonial-card" data-testid="testimonial-1">
+                    <div class="testimonial-header">
+                        <img src="https://i.pravatar.cc/150?img=1" loading="lazy" alt="Maria Silva">
+                        <div>
+                            <h4>Maria Silva</h4>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>"As roupas são incríveis e a entrega foi super rápida! Adorei a qualidade das peças."</p>
+                </div>
+                <div class="testimonial-card" data-testid="testimonial-2">
+                    <div class="testimonial-header">
+                        <img src="https://i.pravatar.cc/150?img=5" loading="lazy" alt="Ana Costa">
+                        <div>
+                            <h4>Ana Costa</h4>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>"Elegância pura! Comprei vários vestidos e todos são perfeitos. Recomendo muito!"</p>
+                </div>
+                <div class="testimonial-card" data-testid="testimonial-3">
+                    <div class="testimonial-header">
+                        <img src="https://i.pravatar.cc/150?img=9" loading="lazy" alt="Juliana Oliveira">
+                        <div>
+                            <h4>Juliana Oliveira</h4>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>"Melhor experiência de compra online! As peças são exatamente como nas fotos."</p>
+                </div>
+                <div class="testimonial-card" data-testid="testimonial-4">
+                    <div class="testimonial-header">
+                        <img src="https://i.pravatar.cc/150?img=20" loading="lazy" alt="Carolina Santos">
+                        <div>
+                            <h4>Carolina Santos</h4>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>"Qualidade excepcional e atendimento impecável. Já sou cliente fiel!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Feed -->
+    <section class="instagram-section" data-testid="instagram-section">
+        <div class="container">
+            <h2 class="section-title">Siga-nos no Instagram</h2>
+            <p class="instagram-handle">@eleganceboutique</p>
+            <a href="https://instagram.com" target="_blank" class="instagram-link" data-testid="instagram-link">
+                <i class="fab fa-instagram"></i> Seguir no Instagram
+            </a>
+            <div class="instagram-grid">
+                <div class="instagram-item" data-testid="instagram-item-0">
+                    <img src="https://images.unsplash.com/photo-1678723357379-d87f2a0ec8ec" loading="lazy" alt="Instagram 1">
+                </div>
+                <div class="instagram-item" data-testid="instagram-item-1">
+                    <img src="https://images.unsplash.com/photo-1753161021164-b075e15e91b3" loading="lazy" alt="Instagram 2">
+                </div>
+                <div class="instagram-item" data-testid="instagram-item-2">
+                    <img src="https://images.unsplash.com/photo-1753161618086-21aebcb7ec5d" loading="lazy" alt="Instagram 3">
+                </div>
+                <div class="instagram-item" data-testid="instagram-item-3">
+                    <img src="https://images.unsplash.com/photo-1762331658154-8aa265ca21e5" loading="lazy" alt="Instagram 4">
+                </div>
+                <div class="instagram-item" data-testid="instagram-item-4">
+                    <img src="https://images.pexels.com/photos/4625046/pexels-photo-4625046.jpeg" loading="lazy" alt="Instagram 5">
+                </div>
+                <div class="instagram-item" data-testid="instagram-item-5">
+                    <img src="https://images.pexels.com/photos/3820312/pexels-photo-3820312.jpeg" loading="lazy" alt="Instagram 6">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" data-testid="cta-section">
+        <div class="container">
+            <h2>Vista-se de confiança</h2>
+            <p>Descubra o seu estilo na Elegance Boutique</p>
+            <div class="cta-buttons">
+                <a href="produtos.html" class="btn-primary" data-testid="cta-shop-btn">Comprar Agora</a>
+                <button onclick="openWhatsApp()" class="btn-secondary" data-testid="cta-whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> Falar no WhatsApp
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" data-testid="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Elegance Boutique</h3>
+                    <p>Moda feminina moderna e elegante para mulheres que valorizam estilo e qualidade.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Links Úteis</h4>
+                    <a href="sobre.html">Sobre Nós</a>
+                    <a href="produtos.html">Produtos</a>
+                    <a href="contato.html">Contato</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Políticas</h4>
+                    <a href="#">Política de Privacidade</a>
+                    <a href="#">Termos de Uso</a>
+                    <a href="#">Envios e Devoluções</a>
+                    <a href="#">FAQ</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contato</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Rua da Moda, 123 - São Paulo, SP</p>
+                    <p><i class="fas fa-phone"></i> (11) 99999-9999</p>
+                    <p><i class="fas fa-envelope"></i> contato@eleganceboutique.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Elegance Boutique. Todos os direitos reservados.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-sidebar" id="cartSidebar" data-testid="cart-sidebar">
+        <div class="cart-header">
+            <h2>Carrinho (<span id="cartItemCount">0</span>)</h2>
+            <button class="close-btn" id="closeCart" data-testid="close-cart-btn">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-body" id="cartItems"></div>
+        <div class="cart-footer" id="cartFooter" style="display: none;">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal" data-testid="cart-total">R$ 0,00</span>
+            </div>
+            <button class="btn-primary btn-block" id="checkoutBtn" data-testid="checkout-btn">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <!-- Wishlist Sidebar -->
+    <div class="wishlist-overlay" id="wishlistOverlay"></div>
+    <div class="wishlist-sidebar" id="wishlistSidebar" data-testid="wishlist-sidebar">
+        <div class="wishlist-header">
+            <h2>Favoritos (<span id="wishlistItemCount">0</span>)</h2>
+            <button class="close-btn" id="closeWishlist" data-testid="close-wishlist-btn">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="wishlist-body" id="wishlistItems"></div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="modal" id="checkoutModal" data-testid="checkout-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Finalizar Compra</h2>
+                <button class="close-btn" id="closeCheckout" data-testid="close-checkout-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="checkoutForm">
+                    <h3>Dados Pessoais</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Nome Completo *</label>
+                            <input type="text" name="name" required data-testid="checkout-name">
+                        </div>
+                        <div class="form-group">
+                            <label>Telefone *</label>
+                            <input type="tel" name="phone" required data-testid="checkout-phone">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" name="email" data-testid="checkout-email">
+                    </div>
+                    
+                    <h3>Endereço de Entrega</h3>
+                    <div class="form-group">
+                        <label>CEP</label>
+                        <input type="text" name="zipCode" data-testid="checkout-zipcode">
+                    </div>
+                    <div class="form-group">
+                        <label>Rua *</label>
+                        <input type="text" name="street" required data-testid="checkout-street">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Número *</label>
+                            <input type="text" name="number" required data-testid="checkout-number">
+                        </div>
+                        <div class="form-group">
+                            <label>Complemento</label>
+                            <input type="text" name="complement" data-testid="checkout-complement">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Bairro *</label>
+                            <input type="text" name="neighborhood" required data-testid="checkout-neighborhood">
+                        </div>
+                        <div class="form-group">
+                            <label>Cidade *</label>
+                            <input type="text" name="city" required data-testid="checkout-city">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Estado *</label>
+                        <input type="text" name="state" required data-testid="checkout-state">
+                    </div>
+                    
+                    <div class="order-summary">
+                        <h3>Resumo do Pedido</h3>
+                        <div id="checkoutSummary"></div>
+                        <div class="summary-total">
+                            <span>Total:</span>
+                            <span id="checkoutTotal" data-testid="checkout-total">R$ 0,00</span>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary btn-block" data-testid="submit-order-btn">
+                        <i class="fab fa-whatsapp"></i> Enviar Pedido via WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
